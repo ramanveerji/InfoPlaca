@@ -16,7 +16,7 @@ async def start(c, m):
         inline_keyboard=[
             [
                 InlineKeyboardButton(
-                    text="🔎 Consulte inline", switch_inline_query_current_chat=""
+                    text="🔎 See inline", switch_inline_query_current_chat=""
                 )
             ]
         ]
@@ -29,8 +29,8 @@ async def start(c, m):
 async def help(c, m):
     keyboard = InlineKeyboardMarkup(
         inline_keyboard=[
-            [InlineKeyboardButton(text="💵 Colabore", callback_data="donate")],
-            [InlineKeyboardButton(text="💻 Meu desenvolvedor", url="t.me/khaledsecond")],
+            [InlineKeyboardButton(text="💵 Collaborate", callback_data="donate")],
+            [InlineKeyboardButton(text="💻 My developer", url="t.me/khaledsecond")],
         ]
     )
     await m.reply_text(hlp, reply_markup=keyboard)
