@@ -28,10 +28,10 @@ async def inline(c, m):
             await m.answer(
                 [
                     InlineQueryResultArticle(
-                        title=f"⚠️ {h['mensagemRetorno']}",
+                        title=f"⚠️ {h['messageReturn']}",
                         thumb_url="https://piics.ml/i/015.png",
                         input_message_content=InputTextMessageContent(
-                            message_text=f"⚠️ <b>{h['mensagemRetorno']}.</b>",
+                            message_text=f"⚠️ <b>{h['messageReturn']}.</b>",
                             parse_mode="HTML",
                         ),
                     )
@@ -77,14 +77,14 @@ async def inline(c, m):
         with httpx.Client(proxies=PROXY) as cl:
             q = cl.get(f"#").json()
 
-        if q["codigoRetorno"] == 98:
+        if q["Returncode"] == 98:
             await m.answer(
                 [
                     InlineQueryResultArticle(
-                        title=f"⚠️ {q['mensagemRetorno']}",
+                        title=f"⚠️ {q['messageReturn']}",
                         thumb_url="https://piics.ml/i/015.png",
                         input_message_content=InputTextMessageContent(
-                            message_text=f"⚠️ <b>{q['mensagemRetorno']}.</b>",
+                            message_text=f"⚠️ <b>{q['messageReturn']}.</b>",
                             parse_mode="HTML",
                         ),
                     )
@@ -95,20 +95,20 @@ async def inline(c, m):
             await m.answer(
                 [
                     InlineQueryResultArticle(
-                        title="Resultado para: " + p.upper(),
+                        title="Result for: " + p.upper(),
                         thumb_url="https://piics.ml/i/015.png",
                         input_message_content=InputTextMessageContent(
                             str(
                                 template.format(
                                     l.now().strftime("%d/%m/%Y às %H:%M:%S"),
                                     p.upper(),
-                                    q["chassi"],
-                                    q["modelo"],
-                                    q["cor"].upper(),
-                                    q["ano"],
-                                    q["municipio"].upper(),
+                                    q["chassis"],
+                                    q["model"],
+                                    q["color"].upper(),
+                                    q["year"],
+                                    q["Country"].upper(),
                                     q["uf"],
-                                    q["situacao"],
+                                    q["situation"],
                                 )
                             ),
                             parse_mode="HTML",
