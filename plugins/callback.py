@@ -13,7 +13,7 @@ async def etanod(c, m):
                 InlineKeyboardButton(text="💵 PayPal", url="#"),
             ],
             [InlineKeyboardButton(text="💵 Pix", callback_data="gpix")],
-            [InlineKeyboardButton(text="◀️ Voltar", callback_data="help")],
+            [InlineKeyboardButton(text="◀️ Return", callback_data="help")],
         ]
     )
     await m.edit_message_text(donate, reply_markup=keyboard)
@@ -23,11 +23,11 @@ async def etanod(c, m):
 async def pleh(c, m):
     keyvoard = InlineKeyboardMarkup(
         inline_keyboard=[
-            [InlineKeyboardButton(text="💵 Colabore", callback_data="donate")],
-            [InlineKeyboardButton(text="💻 Meu desenvolvedor", url="t.me/khaledsecond")],
+            [InlineKeyboardButton(text="💵 Collaborate", callback_data="donate")],
+            [InlineKeyboardButton(text="💻 My developer", url="t.me/khaledsecond")],
             [
                 InlineKeyboardButton(
-                    text="🔎 Consulte inline", switch_inline_query_current_chat=""
+                    text="🔎 See inline", switch_inline_query_current_chat=""
                 )
             ],
         ]
@@ -39,7 +39,7 @@ async def pleh(c, m):
 async def xipg(c, m):
     keybaard = InlineKeyboardMarkup(
         inline_keyboard=[
-            [InlineKeyboardButton(text="🗑 Apagar mensagem", callback_data="delete")]
+            [InlineKeyboardButton(text="🗑 delete message", callback_data="delete")]
         ]
     )
     await c.send_photo(m.message.chat.id, photo="#", caption="#", reply_markup=keybaard)
