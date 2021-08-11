@@ -1,39 +1,39 @@
 # START COMMAND
-strt = """Digite a placa ou clique no botão abaixo."""
+strt = """Enter the board or click on the button below."""
 
 
 # HELP COMMAND
-hlp = """Olá 👋, aqui é a área de ajuda do <b>InfoPlaca</b>.
+hlp = """Hi 👋, here is the help area of <b>InfoPlaca</b>.
 
-ℹ️ <b>Informações básicas:</b>
-Para consultar uma placa envie no formato: <code>ABC-1234</code> ou <code>ABC1234</code>.
-Também disponível a consulta no formato <b>MERCOSUL</b>: <code>ABC1A23</code>
-<i>*Disponível para qualquer veículo.</i>
+ℹ️ <b>Basic information:</b>
+To consult a plate, send it in the format: <code>ABC-1234</code> ou <code>ABC1234</code>.
+Also available for consultation in the format <b>MERCOSUL</b>: <code>ABC1A23</code>
+<i>*Available for any vehicle.</i>
 
-O uso também pode ser via inline, digite: <code>@InfoPlacaBot PLACA</code> no campo de texto.
-<i>*Atalho na mensagem de start.</i>
+Use can also be via inline, type: <code>@InfoPlacaBot PLATE</code> in the text field.
+<i>*shortcut in start message.</i>
 
 
 
-🤖 Quer colaborar nossos projetos? Clique no botão abaixo e apoie o meu desenvolvimento!"""
+🤖 Do you want to collaborate with our projects? Click on the button below and support my development!"""
 
 
 # DONATE COMMAND
-donate = """Ajude no desenvolvimento e manutenção de nossos projetos. 
+donate = """Help in the development and maintenance of our projects. 
 
-Qualquer valor nos ajuda! 👋🤖"""
+Any value helps us! 👋🤖"""
 
 
 # TEMPLATE TO INSERT REQUEST INFO
-template = """ℹ <b>Informações da Placa</b>
+template = """ℹ <b>Plate Information</b>
 📆 <i>{}</i>
 
-<b>Placa:</b> <code>{}</code>
-<b>Chassi:</b> <code>***{}</code>
-<b>Modelo:</b> <code>{}</code>
-<b>Cor:</b> <code>{}</code>
-<b>Ano:</b> <code>{}</code>
-<b>Cidade:</b> <code>{}-{}</code>
-<b>Situação:</b> <code>{}</code>
+<b>Plate:</b> <code>{}</code>
+<b>Chassis:</b> <code>***{}</code>
+<b>Model:</b> <code>{}</code>
+<b>Color:</b> <code>{}</code>
+<b>Year:</b> <code>{}</code>
+<b>City:</b> <code>{}-{}</code>
+<b>Situation:</b> <code>{}</code>
 
 @InfoPlacabot"""
