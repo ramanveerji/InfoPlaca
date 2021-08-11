@@ -19,9 +19,9 @@ async def listen(c, m):
     with httpx.Client(proxies=PROXY) as cli:
         v = cli.get(f"#").json()
 
-    if v["codigoRetorno"] == 98:
+    if v["Returncode"] == 98:
         await m.reply_text(
-            f"⚠️ <b>{v['mensagemRetorno']}.</b>", quote=True, parse_mode="HTML"
+            f"⚠️ <b>{v['messageReturn']}.</b>", quote=True, parse_mode="HTML"
         )
 
     else:
@@ -29,13 +29,13 @@ async def listen(c, m):
             template.format(
                 l.now().strftime("%d/%m/%Y às %H:%M:%S"),
                 s,
-                v["chassi"],
-                v["modelo"],
-                v["cor"].upper(),
-                v["ano"],
-                v["municipio"].upper(),
+                v["chassis"],
+                v["model"],
+                v["color"].upper(),
+                v["year"],
+                v["country"].upper(),
                 v["uf"],
-                v["situacao"],
+                v["situuation"],
             ),
             quote=True,
             parse_mode="HTML",
