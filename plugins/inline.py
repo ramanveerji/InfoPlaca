@@ -42,20 +42,20 @@ async def inline(c, m):
             await m.answer(
                 [
                     InlineQueryResultArticle(
-                        title="Resultado para: " + g,
+                        title="Result for: " + g,
                         thumb_url="https://piics.ml/i/015.png",
                         input_message_content=InputTextMessageContent(
                             str(
                                 template.format(
                                     l.now().strftime("%d/%m/%Y às %H:%M:%S"),
                                     g,
-                                    h["chassi"],
-                                    h["modelo"],
-                                    h["cor"].upper(),
-                                    h["ano"],
-                                    h["municipio"].upper(),
+                                    h["chassis"],
+                                    h["model"],
+                                    h["color"].upper(),
+                                    h["year"],
+                                    h["country"].upper(),
                                     h["uf"],
-                                    h["situacao"],
+                                    h["situation"],
                                 )
                             ),
                             parse_mode="HTML",
